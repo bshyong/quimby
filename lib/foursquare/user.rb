@@ -165,9 +165,15 @@ module Foursquare
     # https://developer.foursquare.com/docs/users/venuehistory
     # https://developer.foursquare.com/docs/explore#req=users/self/venuehistory
     def venue_history(options={})
-      @foursquare.get("users/#{id}/venuehistory", options)["venues"]["items"].map do |item|
+      @venue_history_response = @foursquare.get("users/#{id}/venuehistory", options)["venues"]
+      @venue_history_response["items"].map do |item|
         Foursquare::Venue.new(@foursquare, item)
       end
+    end
+    
+    def venue_history_count(options={})
+      venue_history(options) if @venue_history_response.blank?
+      @venue_history_response["count"]
     end
 
   end
