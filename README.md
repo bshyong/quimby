@@ -1,4 +1,4 @@
-# This is a fork of the Quimby plugin. It has a couple of features not in the Groupme fork, added by LocationStar, including:
+This is a fork of the Quimby plugin. It has a couple of features not in the Groupme fork, added by LocationStar, including:
 
 1. Searching for managed venues
 2. Retrieving stats from managed venues
