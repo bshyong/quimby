@@ -170,7 +170,7 @@ module Foursquare
         Foursquare::Venue.new(@foursquare, item)
       end
     end
-    
+
     def venue_history_count(options={})
       venue_history(options) if @venue_history_response.blank?
       @venue_history_response["count"]

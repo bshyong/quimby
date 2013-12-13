@@ -23,6 +23,10 @@ module Foursquare
       @json["contact"]
     end
 
+    def been_here_count
+      @json["beenHere"]
+    end
+
     def twitter
       contact['twitter']
     end
